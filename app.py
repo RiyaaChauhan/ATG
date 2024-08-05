@@ -86,23 +86,25 @@ class Blog(db.Model):
 def index():
     return render_template('index.html')
 
-@app.route('/signup')
-def signup():
-    return render_template('signup.html')
-
 @app.route('/login')
 def login():
     return render_template('login.html')
 
-@app.route('/doctor_dashboard')
-def doctor_dashboard():
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
+
+
+@app.route('/dashboard_doctor')
+def dashboard_doctor():
     blogs = Blog.query.filter_by(author='doctor').all()
     return render_template('doctor_dashboard.html', blogs=blogs)
 
 @app.route('/patient_dashboard')
 def patient_dashboard():
     blogs = Blog.query.filter_by(draft=False).all()
-    return render_template('patient_dashboard.html', blogs=blogs)
+    return render_template('doctor_dashboard.html', blogs=blogs)
 
 @app.route('/create_blog', methods=['GET', 'POST'])
 def create_blog():
