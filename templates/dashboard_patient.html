@@ -2,23 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .topic {
+            margin-bottom: 20px;
+        }
+        .topic h2 {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0;
+        }
+        .blog-post {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .blog-post:last-child {
+            border-bottom: none;
+        }
+        .blog-post h3 {
+            margin: 0;
+            color: #333;
+        }
+        .blog-post p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .blog-post a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .blog-post a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Patient Dashboard</h1>
-    <p>Welcome, {{ user[1] }} {{ user[2] }}!</p>
-    <p>Username: {{ user[4] }}</p>
-    <p>Email: {{ user[5] }}</p>
-    <p>Address: {{ user[8] }}, {{ user[9] }}, {{ user[10] }} - {{ user[11] }}</p>
-    <img src="{{ url_for('static', filename='uploads/' + user[3]) }}" alt="Profile Picture">
-    <h2>Blog Posts</h2>
-    {% for post in posts %}
-        <div>
-            <h3>{{ post[1] }}</h3>
-            <img src="{{ url_for('static', filename='uploads/' + post[2]) }}" alt="Post Image">
-            <p>{{ post[4].split()[:15]|join(' ') }}{% if post[4].split()|length > 15 %}...{% endif %}</p>
+    <div class="container">
+        <h1>Patient Dashboard</h1>
+
+        <!-- Topic 1 -->
+        <div class="topic">
+            <h2>Health & Wellness</h2>
+            <div class="blog-post">
+                <h3><a href="#">Mental Health</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facere dolore provident tempore voluptatem iste modi aut deleniti, expedita fugit delectus quisquam sint repellat unde impedit alias hic quas nihil ipsam minus reprehenderit? Laborum asperiores natus, mollitia quibusdam voluptatem esse doloribus, tenetur deserunt maiores praesentium aut autem laudantium similique eos?</p>
+            </div>
+            
         </div>
-    {% endfor %}
-    <a href="{{ url_for('logout') }}">Log Out</a>
+
+        <!-- Topic 2 -->
+        <div class="topic">
+            <h2>Heart disease</h2>
+            <div class="blog-post">
+                <h3><a href="#">Breakthroughs Heart diseases</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet possimus dicta, commodi odit nemo eos, voluptates inventore iure quae non nam eaque animi eligendi perferendis ex, voluptas atque eveniet. Sapiente consequatur autem excepturi, dolorum repudiandae accusantium numquam, laborum a corporis, dolore eligendi modi molestiae optio sequi ratione dicta. Quos, numquam! Neque, impedit, maiores facere repellendus dolor voluptas nihil aliquam nemo fugit obcaecati optio quam maxime necessitatibus beatae inventore voluptatum? Amet maxime veritatis odit nobis ullam ea ipsam exercitationem cumque excepturi.</p>
+            </div>
+        </div>
+
+        <!-- Topic 3 -->
+        <div class="topic">
+            <h2>Covid-19</h2>
+            <div class="blog-post">
+                <h3><a href="#">Managing Stress Effectively</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus officia praesentium et quia ipsum exercitationem quaerat error! Temporibus, enim sequi hic porro nesciunt dicta deleniti cupiditate dolores. Similique nobis et suscipit maxime molestias aliquam rem pariatur doloremque saepe qui. Delectus aut at cupiditate possimus. Facilis exercitationem distinctio provident placeat quam dolores eius dolorum vitae sit officia odit inventore voluptatibus ab commodi vero ipsum ea non ut, eaque veritatis reprehenderit expedita? Assumenda natus maxime suscipit odit, ut ipsum repudiandae totam. In.</p>
+            </div>
+           
+        </div>
+
+        <!-- Topic 4 -->
+        <div class="topic">
+            <h2>Immunization</h2>
+            <div class="blog-post">
+                <h3><a href="#">Tips for a Balanced Diet</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptate est iure omnis, ipsa doloribus fugit necessitatibus doloremque aspernatur libero? Neque alias a sequi error voluptatem molestias, similique quas aliquam et dolorem odio voluptatibus dolor doloribus cumque totam odit quos dolorum dicta. Maxime placeat tempora saepe blanditiis quia consequuntur dolorem quod rem dolores nihil similique minus repellendus tenetur quis corrupti totam alias nesciunt, laudantium voluptatum. Labore minima molestiae architecto accusantium voluptatibus minus, ex nam eum velit in modi incidunt inventore?</p>
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            &copy; 2024 Health Management System
+        </div>
+    </div>
 </body>
 </html>
