@@ -93,7 +93,24 @@ def login():
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
+# @app.route('/submit', methods=['POST'])
+# def submit():
+#     # Here you would handle form data and any processing
+#     # For now, we just redirect to the 'success' page
+#     return redirect(url_for('success'))
 
+# @app.route('/success')
+# def success():
+#     return render_template('dashboard_doctor.html')
+@app.route('/submit', methods=['POST'])
+def submit():
+    # Here you would handle form data and any processing
+    # For now, we just redirect to the 'dashboard_doctor' page
+    return redirect(url_for('dashboard_doctor'))
+
+@app.route('/dashboard_doctor')
+def dashboard_doctor():
+    return render_template('dashboard_doctor.html')
 
 
 @app.route('/dashboard_doctor')

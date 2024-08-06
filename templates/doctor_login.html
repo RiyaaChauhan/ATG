@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="form-container">
-      <form action="/" method="POST">
+      
         <h1>Doctor Login</h1>
         <div class="container" >
             <form>
@@ -25,7 +25,11 @@
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <!-- <button class="btn btn-primary">Submit</button> -->
+                <form action="{{ doctor_login }}" method="post"></form>
+
+                  <!-- <button >Submit</button> -->
+                  <a class="btn btn-primary" href="./dashboard_doctor.html" role="button">Submit</a>
                 <a class="btn btn-primary" href="./signup.html" role="button">Sign Up</a>
         <a class="btn btn-primary" href="./index.html" role="button">Back To Dashboard</a>
               </form>
