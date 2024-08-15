@@ -86,6 +86,6 @@ This project is a multi-login system that supports two types of users: **Doctors
 ├── static/                   # Contains static files like CSS, JS, Images
 ├── models/                   # Database models for users and blogs
 ├── routes/                   # Backend routes for handling login, blog CRUD operations
-├── app.js                    # Main application logic (if using Node.js)
+├── app.py                    # Main application logic
 ├── README.md                 # Project documentation
 └── database.sql              # SQL file for setting up the database
