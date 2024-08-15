@@ -7,6 +7,7 @@ This project is a multi-login system that supports two types of users: **Doctors
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
+- [Endpoints](#endpoints)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -96,15 +97,33 @@ Ensure you have Node.js installed. Run the following command to install the requ
 ## Project Structure
 
 ```plaintext
-.
-├── templates/                # Contains HTML files
-├── static/                   # Contains static files like CSS, JS, Images
-├── models/                   # Database models for users and blogs
-├── routes/                   # Backend routes for handling login, blog CRUD operations
-├── app.js                    # Main application logic
-├── README.md                 # Project documentation
-└── database.sql              # SQL file for setting up the database
+multi_login/
+├── templates/
+│   ├── base.html
+│   ├── login.html
+│   ├── doctor_dashboard.html
+│   ├── patient_dashboard.html
+│   ├── create_blog.html
+│   ├── view_blogs.html
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+├── app.js                    # Backend app (example: Node.js)
+├── routes/
+│   ├── auth.js               # Authentication logic
+│   ├── blog.js               # Blog-related routes
+├── models/
+│   ├── User.js               # User model (Doctors & Patients)
+│   └── Blog.js               # Blog model
+├── database.sql              # SQL script to set up the database
+├── package.json              # For Node.js dependencies
+└── README.md                 # Project documentation
 ```
 
 ## Contributing
 Feel free to fork this repository and submit pull requests. For issues or suggestions, please open an issue on the GitHub repository.
+
+## License
