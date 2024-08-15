@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Doctor Dashboard</h1>
+
+    <p>Welcome, Dr. [Doctor's Name]. Here you can manage your patients, post blogs, and view your schedule.</p>
+    <div class="dashboard-section">
+        <h2>Manage Patients</h2>
+        <p>View and manage patient records, treatment plans, and more.</p>
+        <a href="/manage_patients" class="btn">Manage Patients</a>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Create Blog</h2>
+        <p>Create and manage your blog posts. Share knowledge with your patients and the community.</p>
+        <a href="./create_blog.html" class="btn">Create Blog Post</a>
+        <a href="./view_blogs.html" class="btn">View My Blogs</a>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>View Schedule</h2>
+        <p>Check your appointment schedule for the day or the week.</p>
+        <a href="/view_schedule" class="btn">View Schedule</a>
+    </div>
+    <a href="/logout">Logout</a>
+
+    
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dashboard-section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</body>
+</html>
+
